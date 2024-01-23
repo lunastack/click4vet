@@ -11,6 +11,7 @@ import { PetsModule } from './pets/pets.module';
 import { UsersModule } from './users/users.module';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
+import { AppointmentsModule } from './appointments/appointments.module';
 
 
 @Module({
@@ -20,7 +21,8 @@ import { AuthModule } from './auth/auth.module';
     AuthModule,
     MongooseModule.forRoot(process.env.DATABASE_URL || "") ,
     PetsModule,
-    OwnersModule
+    OwnersModule,
+    AppointmentsModule
   ],
   controllers: [AppController],
   providers: [
